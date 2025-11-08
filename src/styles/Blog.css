@@ -1,0 +1,100 @@
+/* 博客页面样式 */
+.blog-page {
+  min-height: calc(100vh - 200px);
+  padding: 3rem 0;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+}
+
+/* 博客文章列表 */
+.blog-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 博客文章卡片 */
+.blog-post-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* 文章标题 */
+.post-header {
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-title a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.post-title a:hover {
+  color: var(--primary-color);
+}
+
+/* 文章元信息 */
+.post-meta {
+  display: flex;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+/* 文章摘要 */
+.post-excerpt {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* 标签 */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: rgba(100, 108, 255, 0.2);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid var(--primary-color);
+}
+
+/* 阅读更多链接 */
+.read-more {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  display: inline-block;
+}
+
+.read-more:hover {
+  color: var(--primary-hover);
+}

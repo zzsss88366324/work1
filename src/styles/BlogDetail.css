@@ -1,0 +1,196 @@
+/* 博客详情页面样式 */
+.blog-detail-page {
+  min-height: calc(100vh - 200px);
+  padding: 3rem 0;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: var(--primary-hover);
+}
+
+/* 博客文章 */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.blog-post .post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.blog-post .post-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.blog-post .post-meta {
+  display: flex;
+  gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post .post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* 文章正文 */
+.post-content {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* 评论区 */
+.comments-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.comments-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* 评论表单 */
+.comment-form {
+  margin-bottom: 2rem;
+}
+
+.comment-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.comment-textarea:focus {
+  outline: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login-prompt {
+  padding: 1.5rem;
+  background-color: rgba(100, 108, 255, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.login-prompt a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* 评论列表 */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.comment {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.comment-date {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+}
+
+.comment-content {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.no-comments {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .blog-post,
+  .comments-section {
+    padding: 1.5rem;
+  }
+
+  .blog-post .post-title {
+    font-size: 2rem;
+  }
+
+  .comment-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
